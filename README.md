@@ -1,1 +1,1 @@
-﻿# react-label-navigation
+# react-label-navigation
