@@ -1,19 +1,17 @@
 import React from 'react';
 import styled from 'styled-components';
+import LabelList from './LabelList';
 
 export type Label = {
   title: string;
   weight?: number;
-};
+} & React.HTMLProps<HTMLAnchorElement>;
 
 type Props = {
   labels: Label[];
 };
 
 const StyledContainer = styled.div`
-  display: flex;
-  flex-direction: row;
-  background: lightblue;
   width: 500px;
   height: 200px;
 `;
@@ -21,11 +19,7 @@ const StyledContainer = styled.div`
 const LabelNavigation: React.FC<Props> = ({ labels }): React.ReactElement => {
   return (
     <StyledContainer>
-      {labels.map((label) => (
-        <a key={label.title} href="">
-          {label.title}
-        </a>
-      ))}
+      <LabelList labels={labels} />
     </StyledContainer>
   );
 };
