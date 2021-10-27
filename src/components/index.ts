@@ -1,1 +1,1 @@
-﻿export { default as LabelNavigation } from './LabelNavigation';
+export { default as LabelIndex } from './LabelIndex';

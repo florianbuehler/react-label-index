@@ -1,20 +1,26 @@
-﻿import React from 'react';
+import React from 'react';
 import styled from 'styled-components';
-import { Label } from './LabelNavigation';
+import { Rank, RankedLabel } from './LabelIndex';
 
-type Props = Label;
+type Props = RankedLabel;
 
-const StyledItem = styled.li`
-  margin: 0.25rem 0.5rem;
+type StyledItemProps = {
+  rank: Rank;
+};
+
+const StyledItem = styled.li<StyledItemProps>`
+  margin: 0.09em 0.2em;
+  padding: 0.05em;
 
   a {
+    font-size: ${(props) => (1 + props.rank / 10) * 0.6}em;
     text-decoration: none;
   }
 `;
 
-const LabelItem: React.FC<Props> = ({ title, weight, ...anchorProps }) => {
+const LabelItem: React.FC<Props> = ({ title, count, rank, ...anchorProps }) => {
   return (
-    <StyledItem>
+    <StyledItem rank={rank}>
       <a {...anchorProps}>{title}</a>
     </StyledItem>
   );
