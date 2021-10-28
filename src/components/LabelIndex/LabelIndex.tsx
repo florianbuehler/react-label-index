@@ -1,35 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
-import LabelList from './LabelList';
-
-export type Label = {
-  title: string;
-  count?: number;
-} & React.HTMLProps<HTMLAnchorElement>;
-
-export type RankedLabel = {
-  rank: Rank;
-} & Label;
-
-export enum Rank {
-  One = 1,
-  Two = 2,
-  Three = 3,
-  Four = 4,
-  Five = 5,
-  Six = 6,
-  Seven = 7,
-  Eight = 8,
-  Nine = 9,
-  Ten = 10
-}
-
-type Props = {
-  title?: string;
-  labels: Label[];
-  sortFn?: (a: Label, b: Label) => number;
-  rankFn?: (label: Label) => Rank;
-};
+import { LabelIndexProps } from './LabelIndex.types';
+import { Label, Rank, RankedLabel } from '../index.types';
+import LabelList from '../LabelList/LabelList';
 
 const StyledContainer = styled.div`
   box-sizing: border-box;
@@ -49,7 +22,7 @@ const rankEvenly = (min: number, max: number, label: Label): Rank => {
   return Rank.Ten;
 };
 
-const LabelIndex: React.FC<Props> = ({ title, labels, sortFn, rankFn }): React.ReactElement => {
+const LabelIndex: React.FC<LabelIndexProps> = ({ title, labels, sortFn, rankFn }): React.ReactElement => {
   const determineOrderFn = sortFn ?? ((a: Label, b: Label) => a.title.localeCompare(b.title));
   const sortedLabels = labels.sort(determineOrderFn);
 

@@ -1,8 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Rank, RankedLabel } from './LabelIndex';
-
-type Props = RankedLabel;
+import { LabelItemProps } from './LabelItem.types';
+import { Rank } from '../index.types';
 
 type StyledItemProps = {
   rank: Rank;
@@ -18,7 +17,7 @@ const StyledItem = styled.li<StyledItemProps>`
   }
 `;
 
-const LabelItem: React.FC<Props> = ({ title, count, rank, ...anchorProps }) => {
+const LabelItem: React.FC<LabelItemProps> = ({ title, count, rank, ...anchorProps }) => {
   return (
     <StyledItem rank={rank}>
       <a {...anchorProps}>{title}</a>

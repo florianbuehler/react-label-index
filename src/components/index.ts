@@ -1,1 +1,1 @@
-export { default as LabelIndex } from './LabelIndex';
+export { default as LabelIndex } from './LabelIndex/LabelIndex';

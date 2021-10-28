@@ -1,12 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
-import { RankedLabel } from './LabelIndex';
-import LabelItem from './LabelItem';
-
-type Props = {
-  title?: string;
-  labels: RankedLabel[];
-};
+import { LabelListProps } from './LabelList.types';
+import { RankedLabel } from '../index.types';
+import LabelItem from '../LabelItem/LabelItem';
 
 const StyledHeader = styled.h2`
   text-align: left;
@@ -30,7 +26,7 @@ const StyledList = styled.ul`
   }
 `;
 
-const LabelList: React.FC<Props> = ({ title, labels }): React.ReactElement => {
+const LabelList: React.FC<LabelListProps> = ({ title, labels }): React.ReactElement => {
   return (
     <>
       <StyledHeader>{title}</StyledHeader>
