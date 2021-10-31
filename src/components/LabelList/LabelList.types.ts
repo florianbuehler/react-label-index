@@ -1,4 +1,4 @@
-﻿import { RankedLabel } from '../index.types';
+import { RankedLabel } from '../index.types';
 
 export type LabelListProps = {
   title?: string;

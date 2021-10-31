@@ -6,8 +6,8 @@ import LabelList from '../LabelList/LabelList';
 
 const StyledContainer = styled.div`
   box-sizing: border-box;
-  width: 1200px;
-  height: 200px;
+  width: 100%;
+  height: 100%;
 `;
 
 const rankEvenly = (min: number, max: number, label: Label): Rank => {

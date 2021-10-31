@@ -1,4 +1,4 @@
-﻿import { Label, Rank } from '../index.types';
+import { Label, Rank } from '../index.types';
 
 export type LabelIndexProps = {
   title?: string;

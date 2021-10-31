@@ -1,4 +1,4 @@
-﻿import { HTMLProps } from 'react';
+import { HTMLProps } from 'react';
 
 export type Label = {
   title: string;
