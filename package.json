@@ -1,7 +1,7 @@
 {
   "name": "react-label-index",
   "version": "0.0.1",
-  "description": "",
+  "description": "A small react component to display labels based on the frequency of their occurence.",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
   "types": "dist/index.d.ts",
