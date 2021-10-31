@@ -12,6 +12,6 @@ const Template: ComponentStory<typeof LabelIndex> = (args) => <LabelIndex {...ar
 
 export const Basic = Template.bind({});
 Basic.args = {
-  title: 'title',
+  title: 'Dividend Champions',
   labels: stockLabels
 };
