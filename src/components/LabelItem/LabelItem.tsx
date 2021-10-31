@@ -1,11 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { LabelItemProps } from './LabelItem.types';
-import { Rank } from '../index.types';
-
-type StyledItemProps = {
-  rank: Rank;
-};
+import { StyledItemProps, LabelItemProps } from './LabelItem.types';
 
 const StyledItem = styled.li<StyledItemProps>`
   margin: 0.09em 0.15em;
