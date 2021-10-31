@@ -1,4 +1,4 @@
-﻿import { Rank, RankedLabel } from '../index.types';
+import { Rank, RankedLabel } from '../index.types';
 
 export type StyledItemProps = {
   rank: Rank;

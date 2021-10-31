@@ -22,7 +22,13 @@ export default [
         sourcemap: true
       }
     ],
-    plugins: [external(), resolve(), commonjs(), typescript({ tsconfig: './tsconfig.json' }), terser()]
+    plugins: [
+      external(),
+      resolve(),
+      commonjs(),
+      typescript({ tsconfig: './tsconfig.json', exclude: ['**/*.stories.tsx'] }),
+      terser()
+    ]
   },
   {
     input: 'dist/esm/types/index.d.ts',
